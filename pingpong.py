@@ -52,7 +52,7 @@ pen.goto(0, 260)
 pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))
 
 
-# Functions
+# Functions for movement of pads
 def pad_1_up():
     y = pad_1.ycor()
     y += 20
