@@ -20,7 +20,7 @@ pad_1.shapesize(stretch_wid=5, stretch_len=1)
 pad_1.penup()
 pad_1.goto(-350, 0)
 
-# Paddle B
+# Pad B
 pad_2 = turtle.Turtle()
 pad_2.speed(0)
 pad_2.shape("square")
