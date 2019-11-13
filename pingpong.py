@@ -11,7 +11,7 @@ wn.tracer(0)
 score_a = 0
 score_b = 0
 
-# Pad A
+# Pad 1
 pad_1 = turtle.Turtle()
 pad_1.speed(0)
 pad_1.shape("square")
@@ -20,7 +20,7 @@ pad_1.shapesize(stretch_wid=5, stretch_len=1)
 pad_1.penup()
 pad_1.goto(-350, 0)
 
-# Pad B
+# Pad 2
 pad_2 = turtle.Turtle()
 pad_2.speed(0)
 pad_2.shape("square")
@@ -49,10 +49,10 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("Player 1: 0 || Player 2: 0", align="center", font=("Comic Sans MS", 24, "normal"))
 
 
-# Functions for movement of pads
+# Functions
 def pad_1_up():
     y = pad_1.ycor()
     y += 20
@@ -99,7 +99,6 @@ while True:
         ball.sety(290)
         ball.dy *= -1
 
-
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
@@ -109,14 +108,14 @@ while True:
     if ball.xcor() > 350:
         score_a += 1
         pen.clear()
-        pen.write("Player 1: {}  Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {} || Player 2: {}".format(score_a, score_b), align="center", font=("Comic Sans MS", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
     elif ball.xcor() < -350:
         score_b += 1
         pen.clear()
-        pen.write("Player 1: {}  Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {} || Player 2: {}".format(score_a, score_b), align="center", font=("Comic Sans MS", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
