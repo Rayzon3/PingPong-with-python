@@ -52,7 +52,7 @@ pen.goto(0, 260)
 pen.write("Player 1: 0 || Player 2: 0", align="center", font=("Comic Sans MS", 24, "normal"))
 
 
-# Functions
+# Functions to move the Pad
 def pad_1_up():
     y = pad_1.ycor()
     y += 20
@@ -119,7 +119,7 @@ while True:
         ball.goto(0, 0)
         ball.dx *= -1
 
-    # Paddle and ball collisions
+    # Pad and ball collisions
     if ball.xcor() < -340 and ball.ycor() < pad_1.ycor() + 50 and ball.ycor() > pad_1.ycor() - 50:
         ball.dx *= -1
 
